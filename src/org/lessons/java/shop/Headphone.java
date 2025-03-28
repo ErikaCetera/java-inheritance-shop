@@ -15,6 +15,11 @@ public class Headphone extends Product {
 
     }
 
+    public Headphone( String name, String brand, String connectionType){
+        super( name, brand);
+        this.connectionType = connectionType;
+    }
+
  
     //get e set
 
@@ -36,8 +41,8 @@ public class Headphone extends Product {
 
     //altri metodi
     @Override
-    public String getInfo(){
-       return  super.getInfo() +" - Info specifiche = Colore: " + color + " Connessione: " + connectionType;
+    public String toString(){
+       return  super.toString() +" - Info specifiche = Colore: " + color + " Connessione: " + connectionType;
         
     }
 }

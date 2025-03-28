@@ -8,10 +8,15 @@ public class Smartphone extends Product {
     private int storage;
 
 
-    //costruttore
+    //costruttori
     public Smartphone(int code, String name, String brand, BigDecimal price, BigDecimal vat, String codeIMEI, int storage){
         super(code, name, brand, price, vat);
         this.codeIMEI = codeIMEI;
+        this.storage = storage;
+    }
+
+    public Smartphone( String name, String brand, int storage){
+        super( name, brand);
         this.storage = storage;
     }
 
@@ -35,8 +40,8 @@ public class Smartphone extends Product {
  
     //altri metodi
     @Override
-    public String getInfo(){
-       return super.getInfo() +" - Informazioni specifiche = Memoria Interna: " + storage;
+    public String toString(){
+       return super.toString() +" - Informazioni specifiche = Memoria Interna: " + storage;
         
     }
 }

@@ -20,7 +20,15 @@ public class Product {
     this.name = name;
     this.brand = brand;
     this.price = price;
-    this.vat = vat;
+    this.vat = new BigDecimal(0.22);
+
+ }
+
+ //costruttore
+ public Product ( String name, String brand){
+    this.name = name;
+    this.brand = brand;
+    
 
  }
 
@@ -67,8 +75,9 @@ public void setVat(BigDecimal vat){
 
 //altri metodi
 
-public String getInfo(){
-    return "Info Prodotto =  Codice: " + code + ", Nome: " + name + " Modello: " + brand + " Prezzo senza Iva: " + price;
+ @Override
+    public String toString() {
+        return String.format("Prodotto aggiunto al carrello : Nome: %s, Modello: %s", name, brand );
 }
 
 }

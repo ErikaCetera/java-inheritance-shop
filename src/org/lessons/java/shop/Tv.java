@@ -15,6 +15,12 @@ public class Tv extends Product{
 
     }
 
+    public Tv( String name, String brand, boolean isSmart, String size){
+        super( name, brand);
+        this.isSmart = false;
+        this.size = size;
+    }
+
 
     // get e set
 
@@ -36,8 +42,8 @@ public class Tv extends Product{
 
     //altri metodi
     @Override
-    public String getInfo(){
-        return super.getInfo() + " - Info specifiche = Dimensioni: " + size + " Tv Smart: " + isSmart;
+    public String toString(){
+        return super.toString() + " - Info specifiche = Dimensioni: " + size + " Tv Smart: " + isSmart;
     }
 
 }

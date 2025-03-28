@@ -9,10 +9,11 @@ public class Main {
     Tv T = new Tv(0, "Samsung", "Samsung", new BigDecimal(229.00), null, false, "30'");
     Headphone H = new Headphone(0, "Galaxy Buds", "Samsung", new BigDecimal(79.00), null, "Nero", "Wirless");
 
+   System.err.println(S);
+   System.err.println(T);
+   System.err.println(H);
 
-    System.out.println(S.getInfo());
-    System.out.println(T.getInfo());
-    System.out.println(H.getInfo());
+    
  }
 
 
